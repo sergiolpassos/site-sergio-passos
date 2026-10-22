@@ -5,8 +5,8 @@
 // =====================================================================
 
 export const profile = {
-  name: "Sérgio Passos",
-  role: "Agile Coach | Especialista em Transformação Ágil",
+  name: "Sérgio Passos Jr.",
+  role: "Especialista em Transformação Ágil e Gestão de Produtos Ágeis",
   location: "Florianópolis/SC, Brasil",
   email: "sergio.passos@gmail.com",
   phoneDisplay: "(48) 98433-3618",
@@ -17,7 +17,7 @@ export const profile = {
 
   headline: "Times que entregam com previsibilidade.",
   subheadline:
-    "Agile Coach e Especialista em Transformação Ágil. Mais de 30 anos em tecnologia, da engenharia de produto à gestão de produtos digitais.",
+    "Especialista em Transformação Ágil e Gestão de Produtos Ágeis. Mais de 30 anos em tecnologia, da engenharia de produto à gestão de produtos digitais.",
 
   // Texto curto da home
   intro:
@@ -25,7 +25,7 @@ export const profile = {
 
   // Resumo profissional completo (página Sobre), com palavras-chave para ATS
   summary: [
-    "Agile Coach e Especialista em Transformação Ágil, com mais de 30 anos em tecnologia. Ajudo áreas de tecnologia a sair do modelo projetizado para a gestão por produtos, com métricas de fluxo, OKRs conectados à execução e entregas que o negócio consegue planejar.",
+    "Especialista em Transformação Ágil e Gestão de Produtos Ágeis, com mais de 30 anos em tecnologia. Ajudo áreas de tecnologia a sair do modelo projetizado para a gestão por produtos, com métricas de fluxo, OKRs conectados à execução e entregas que o negócio consegue planejar.",
     "Sou engenheiro eletricista e passei por telecomunicações, indústria e varejo (Dígitro, Intelbras, Riachuelo e Pernambucanas) antes de me dedicar à agilidade. Essa base técnica me ajuda a conversar com engenharia, produto e negócio na mesma língua.",
   ],
 
@@ -41,7 +41,7 @@ export const pillars = [
   { icon: "workflow", title: "Transformação ágil", text: "Do diagnóstico ao playbook, até a cultura dos times." },
   { icon: "gauge", title: "Gestão por fluxo", text: "Lead Time, Throughput e Aging guiando decisões." },
   { icon: "target", title: "Estratégia na execução", text: "OKRs desdobrados até o item de trabalho." },
-  { icon: "boxes", title: "Produto antes de projeto", text: "Times contínuos e ciclo de vida do produto." },
+  { icon: "boxes", title: "Produtos e projetos", text: "Gestão de produtos e de projetos estruturantes, como SAP, WMS e Oracle Fusion." },
   { icon: "cpu", title: "Base de engenharia", text: "20 anos em hardware, firmware e qualidade." },
   { icon: "globe", title: "Atuação internacional", text: "Projetos em inglês com EUA, Índia e China." },
 ] as const
@@ -106,6 +106,7 @@ export const experience = [
       "Atuação na atualização do WMS para SAP S/4HANA e nas evoluções do Millennium (Linx).",
       "Ciclo completo de OKRs, com atingimento aproximado de 80% e visibilidade executiva do progresso.",
       "Dashboards em Power BI e Azure DevOps; liderança de pessoas com feedback contínuo e PDIs.",
+      "O Ecossistema de Logística atingiu o nível 3 de maturidade ágil, o mais alto da régua aplicada.",
     ],
   },
   {

@@ -39,7 +39,7 @@ export default function About() {
         </div>
         <aside className="min-w-0">
           <div className="overflow-hidden rounded-xl bg-steel">
-            <img src={photo} alt="Sérgio Passos" width={860} height={1004} className="aspect-[6/7] w-full object-cover object-top" />
+            <img src={photo} alt="Sérgio Passos Jr." width={860} height={1004} className="aspect-[6/7] w-full object-cover object-top" />
           </div>
           <dl className="mt-6 divide-y border-y">
             {profile.facts.map((f) => (

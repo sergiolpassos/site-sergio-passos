@@ -41,7 +41,7 @@ export default function Home() {
           <div className="overflow-hidden rounded-xl bg-steel">
             <img
               src={photo}
-              alt="Sérgio Passos, de camisa azul e braços cruzados"
+              alt="Sérgio Passos Jr., de camisa azul e braços cruzados"
               width={860}
               height={1004}
               className="aspect-[6/7] w-full object-cover object-top"

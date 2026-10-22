@@ -14,18 +14,18 @@ import BlogPost from "@/pages/BlogPost"
 import NotFound from "@/pages/NotFound"
 
 const titles: Record<string, string> = {
-  "/": "Sérgio Passos | Agile Coach",
-  "/sobre": "Sobre | Sérgio Passos",
-  "/projetos": "Projetos | Sérgio Passos",
-  "/blog": "Blog | Sérgio Passos",
-  "/contato": "Contato | Sérgio Passos",
+  "/": "Sérgio Passos Jr. | Transformação Ágil e Gestão de Produtos",
+  "/sobre": "Sobre | Sérgio Passos Jr.",
+  "/projetos": "Projetos | Sérgio Passos Jr.",
+  "/blog": "Blog | Sérgio Passos Jr.",
+  "/contato": "Contato | Sérgio Passos Jr.",
 }
 
 function RouteEffects() {
   const { pathname } = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = titles[pathname] ?? "Sérgio Passos | Agile Coach"
+    document.title = titles[pathname] ?? "Sérgio Passos Jr. | Transformação Ágil e Gestão de Produtos"
   }, [pathname])
   return null
 }

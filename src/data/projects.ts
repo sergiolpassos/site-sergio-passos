@@ -278,7 +278,7 @@ export const projects: Project[] = [
     role: "Especialista em Agilidade",
     scope: "Tecnologia, incluindo a tribo de Inteligência Comercial (5 squads)",
     featured: true,
-    impact: ["-66,7% no lead time de features", "Throughput de features quase 2x em 2025"],
+    impact: ["-66,7% no lead time de features", "Logística no nível 3 de maturidade"],
     metrics: [
       { value: "-66,7%", label: "lead time de features", detail: "de 30 para 10 dias" },
       { value: "~2x", label: "throughput de features", detail: "média de 21 por mês no 1º semestre de 2025 para 41 no 2º" },
@@ -408,6 +408,7 @@ export const projects: Project[] = [
     ],
     results: [
       { area: "Previsibilidade", text: "Lead time das features reduzido de 30 para 10 dias, uma redução aproximada de 66,7%." },
+      { area: "Maturidade", text: "O Ecossistema de Logística, que liderei como Squad Lead, atingiu o nível 3 de maturidade ágil, o mais alto da régua aplicada." },
       { area: "Vazão", text: "Throughput de features quase dobrou em 2025: média de 21 por mês no 1º semestre para 41 no 2º, com 329 entregues no ano." },
       { area: "Compromissos com base em dados", text: "Prazos passaram a ser negociados por percentil: 85% das features entregues em até 37 dias após o início do desenvolvimento." },
       { area: "Qualidade", text: "480 bugs resolvidos em 2025 com lead time médio de 8 dias e reabertura de apenas 2,3%." },
