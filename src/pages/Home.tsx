@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom"
-import { Download, Mail, MessageCircle } from "lucide-react"
+import { ArrowRight, Boxes, Cpu, Download, Gauge, Globe2, Mail, MessageCircle, Target, Workflow } from "lucide-react"
 
 import photo from "@/assets/sergio-passos.jpg"
-import { pillars, profile, projects } from "@/data/profile"
+import { pillars, profile } from "@/data/profile"
+import { projects } from "@/data/projects"
+import { formatDate, sortedPosts } from "@/data/blog"
 import { Button } from "@/components/ui/button"
-import { CareerBar } from "@/components/CareerBar"
 import { ProjectRow } from "@/components/ProjectRow"
 import { Section } from "@/components/Section"
 
+const pillarIcons = { workflow: Workflow, gauge: Gauge, target: Target, boxes: Boxes, cpu: Cpu, globe: Globe2 }
+
 export default function Home() {
   const featured = projects.filter((p) => p.featured)
+  const latestPosts = sortedPosts().slice(0, 3)
 
   return (
     <>
@@ -46,26 +50,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trajetória */}
-      <Section
-        title="32 anos de carreira, em escala"
-        intro={<p>Cada bloco tem a largura do tempo que passei em cada empresa. A cor mostra a fase da carreira.</p>}
-      >
-        <CareerBar />
-        <Button asChild variant="link" className="mt-6 h-auto px-0">
-          <Link to="/sobre">Ver a trajetória completa</Link>
-        </Button>
-      </Section>
-
       {/* Como atuo */}
       <Section title="Como eu atuo" intro={<p>{profile.intro}</p>}>
-        <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-          {pillars.map((p) => (
-            <div key={p.title} className="border-t pt-5">
-              <h3 className="font-sans text-base font-semibold tracking-normal">{p.title}</h3>
-              <p className="mt-1.5 text-muted-foreground">{p.text}</p>
-            </div>
-          ))}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {pillars.map((p) => {
+            const Icon = pillarIcons[p.icon]
+            return (
+              <div key={p.title} className="rounded-xl border bg-card p-6">
+                <span className="grid size-11 place-items-center rounded-lg bg-accent-soft text-accent">
+                  <Icon className="size-5" aria-hidden />
+                </span>
+                <h3 className="mt-4 font-sans text-base font-semibold tracking-normal">{p.title}</h3>
+                <p className="mt-1 text-muted-foreground">{p.text}</p>
+              </div>
+            )
+          })}
         </div>
       </Section>
 
@@ -81,6 +80,31 @@ export default function Home() {
         </Button>
       </Section>
 
+      {/* Blog */}
+      {latestPosts.length > 0 && (
+        <Section title="Do blog">
+          <ul className="divide-y border-y">
+            {latestPosts.map((p) => (
+              <li key={p.slug}>
+                <Link to={`/blog/${p.slug}`} className="group grid gap-1 py-5 sm:grid-cols-[1fr_6rem] sm:gap-6">
+                  <span className="min-w-0">
+                    <span className="block text-lg font-semibold group-hover:text-accent">{p.title}</span>
+                    <span className="mt-1 block text-muted-foreground">{p.summary}</span>
+                  </span>
+                  <span className="text-sm text-muted-foreground tabular-nums sm:text-right">{formatDate(p.date)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Button asChild variant="outline" className="mt-8">
+            <Link to="/blog">
+              Ver todos os textos
+              <ArrowRight />
+            </Link>
+          </Button>
+        </Section>
+      )}
+
       {/* Contato */}
       <Section>
         <div className="rounded-xl bg-primary px-6 py-10 text-primary-foreground md:px-12 md:py-14">
@@ -91,6 +115,10 @@ export default function Home() {
             Estou disponível para posições de Agile Coach, Especialista em Agilidade e Squad Lead, além de Gestão de Produtos e
             Gestão de Projetos.
           </p>
+          <ul className="mt-5 flex flex-wrap gap-2 text-sm">
+            <li className="rounded-full border border-primary-foreground/30 px-3 py-1">Presencial na Grande Florianópolis</li>
+            <li className="rounded-full border border-primary-foreground/30 px-3 py-1">Remoto ou teletrabalho em todo o Brasil e no exterior</li>
+          </ul>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <a href={`mailto:${profile.email}`}>

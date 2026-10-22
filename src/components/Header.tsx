@@ -10,6 +10,7 @@ export const navItems = [
   { to: "/", label: "Início" },
   { to: "/sobre", label: "Sobre" },
   { to: "/projetos", label: "Projetos" },
+  { to: "/blog", label: "Blog" },
   { to: "/contato", label: "Contato" },
 ]
 

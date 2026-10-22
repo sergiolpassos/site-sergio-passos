@@ -15,6 +15,14 @@ import { Badge } from "@/components/ui/badge"
 import { CareerBar } from "@/components/CareerBar"
 import { Section } from "@/components/Section"
 
+const peoplePhotos = import.meta.glob("@/assets/people/*", { eager: true, import: "default" }) as Record<string, string>
+const personPhoto = (file: string) =>
+  Object.entries(peoplePhotos).find(([k]) => k.endsWith("/" + file))?.[1]
+const initials = (name: string) => {
+  const parts = name.split(" ").filter(Boolean)
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+}
+
 export default function About() {
   return (
     <>
@@ -69,22 +77,6 @@ export default function About() {
         <p className="mt-5 text-sm text-muted-foreground">{teachingNote}</p>
       </Section>
 
-      <Section>
-        <div className="grid gap-8 rounded-xl bg-accent-soft p-6 md:grid-cols-[auto_1fr] md:p-10">
-          <Globe2 className="size-9 text-accent" aria-hidden />
-          <div className="min-w-0">
-            <h2 className="text-3xl font-semibold">{english.level}, no trabalho desde 2010</h2>
-            <p className="mt-4 max-w-[70ch]">{english.text}</p>
-            <ul className="mt-6 flex flex-wrap gap-2">
-              {english.points.map((p) => (
-                <li key={p}>
-                  <Badge variant="secondary" className="bg-background text-sm">{p}</Badge>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </Section>
 
       <Section title="Formação e certificações">
         <div className="grid gap-12 md:grid-cols-2">
@@ -139,19 +131,49 @@ export default function About() {
       </Section>
 
       {recommendations.length > 0 && (
-        <Section title="Recomendações">
-          <div className="gap-12 md:columns-2">
+        <Section title="Recomendações" intro={<p>Depoimentos de gestores e colegas, publicados no meu LinkedIn.</p>}>
+          <div className="grid overflow-hidden rounded-xl border md:grid-cols-2">
             {recommendations.map((r) => (
-              <figure key={r.author} className="mb-10 break-inside-avoid border-l-2 border-accent pl-5">
-                <blockquote className="text-[1.05rem]">“{r.text}”</blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">{r.author}</span>, {r.role}
+              <figure key={r.author} className="border-b p-6 md:p-8 md:odd:border-r md:last:odd:col-span-2 md:last:odd:border-r-0">
+                <figcaption className="flex items-center gap-3">
+                  {r.photo ? (
+                    <img src={personPhoto(r.photo)} alt="" className="size-11 shrink-0 rounded-full object-cover" />
+                  ) : (
+                    <span aria-hidden className="grid size-11 shrink-0 place-items-center rounded-full bg-steel text-sm font-semibold text-white">
+                      {initials(r.author)}
+                    </span>
+                  )}
+                  <span className="min-w-0">
+                    <span className="block font-semibold">{r.author}</span>
+                    <span className="block text-sm text-muted-foreground">{r.role}</span>
+                  </span>
                 </figcaption>
+                <blockquote className="mt-4">
+                  <span aria-hidden className="mr-1 font-display text-2xl leading-none text-accent">“</span>
+                  {r.text}
+                  <span aria-hidden className="ml-1 font-display text-2xl leading-none text-accent">”</span>
+                </blockquote>
               </figure>
             ))}
           </div>
         </Section>
       )}
+      <Section className="pb-4">
+        <div className="grid gap-8 rounded-xl bg-accent-soft p-6 md:grid-cols-[auto_1fr] md:p-10">
+          <Globe2 className="size-9 text-accent" aria-hidden />
+          <div className="min-w-0">
+            <h2 className="text-3xl font-semibold">{english.level}, no trabalho desde 2010</h2>
+            <p className="mt-4 max-w-[70ch]">{english.text}</p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {english.points.map((p) => (
+                <li key={p}>
+                  <Badge variant="secondary" className="bg-background text-sm">{p}</Badge>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
     </>
   )
 }

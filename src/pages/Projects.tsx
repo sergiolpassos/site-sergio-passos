@@ -1,4 +1,4 @@
-import { projects } from "@/data/profile"
+import { projects } from "@/data/projects"
 import { ProjectRow } from "@/components/ProjectRow"
 
 export default function Projects() {

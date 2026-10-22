@@ -7,7 +7,7 @@
 export const profile = {
   name: "Sérgio Passos",
   role: "Agile Coach | Especialista em Transformação Ágil",
-  location: "São José/SC, Brasil",
+  location: "Florianópolis/SC, Brasil",
   email: "sergio.passos@gmail.com",
   phoneDisplay: "(48) 98433-3618",
   whatsapp: "https://wa.me/5548984333618",
@@ -21,14 +21,12 @@ export const profile = {
 
   // Texto curto da home
   intro:
-    "Engenheiro eletricista de formação, passei por telecomunicações, indústria e varejo antes de me dedicar à transformação ágil. Hoje ajudo áreas de tecnologia a sair do modelo projetizado para a gestão por produtos, com fluxo medido, OKRs conectados à execução e entregas que o negócio consegue planejar.",
+    "Ajudo áreas de tecnologia a entregar com previsibilidade, conectando estratégia, produto e execução.",
 
   // Resumo profissional completo (página Sobre), com palavras-chave para ATS
   summary: [
-    "Agile Coach e Especialista em Transformação Ágil com mais de 30 anos em tecnologia. Conduzo transformação digital, implantação de modelos operacionais ágeis e a evolução do modelo projetizado para a gestão orientada a produtos, conectando estratégia corporativa, OKRs e execução técnica.",
-    "Minha trajetória combina engenharia de produto, coordenação de times técnicos, liderança de squads multidisciplinares e gestão do ciclo de vida de sistemas e produtos, de ambientes legados a arquiteturas modernas, nos setores de varejo, telecomunicações, segurança eletrônica, indústria e produtos digitais.",
-    "Estruturo governança tecnológica e gestão orientada a dados com métricas de fluxo (Lead Time, Cycle Time, Throughput e Aging), Kanban (STATIK e Kanban Maturity Model) e dashboards estratégicos, táticos e operacionais em Jira e Power BI, apoiando priorização, previsibilidade e tomada de decisão.",
-    "Atuo próximo à diretoria, lideranças de Produto e Operações, Product Owners e Squad Leads na gestão de backlog, OKRs, qualidade de entregas, integrações e sustentação de sistemas críticos. O foco é valor concreto para o negócio: eficiência operacional, redução de desperdícios, estabilidade, transparência entre tecnologia e áreas de negócio e entrega consistente de resultados.",
+    "Agile Coach e Especialista em Transformação Ágil, com mais de 30 anos em tecnologia. Ajudo áreas de tecnologia a sair do modelo projetizado para a gestão por produtos, com métricas de fluxo, OKRs conectados à execução e entregas que o negócio consegue planejar.",
+    "Sou engenheiro eletricista e passei por telecomunicações, indústria e varejo (Dígitro, Intelbras, Riachuelo e Pernambucanas) antes de me dedicar à agilidade. Essa base técnica me ajuda a conversar com engenharia, produto e negócio na mesma língua.",
   ],
 
   facts: [
@@ -40,31 +38,13 @@ export const profile = {
 }
 
 export const pillars = [
-  {
-    title: "Transformação ágil de ponta a ponta",
-    text: "Do diagnóstico com STATIK ao playbook do modelo de trabalho e à consolidação cultural nos times.",
-  },
-  {
-    title: "Gestão orientada a fluxo",
-    text: "Lead Time, Cycle Time, Throughput e Aging como base para priorizar, prever e decidir.",
-  },
-  {
-    title: "Estratégia ligada à execução",
-    text: "OKRs desdobrados em iniciativas, épicos e itens de trabalho rastreáveis no Jira.",
-  },
-  {
-    title: "Produto antes de projeto",
-    text: "Transição do modelo projetizado para times contínuos, com gestão do ciclo de vida do produto.",
-  },
-  {
-    title: "Base de engenharia",
-    text: "Duas décadas em hardware, firmware, software, qualidade e homologação antes da agilidade.",
-  },
-  {
-    title: "Atuação internacional",
-    text: "Projetos em inglês com engenheiros e times comerciais nos EUA, Índia e China.",
-  },
-]
+  { icon: "workflow", title: "Transformação ágil", text: "Do diagnóstico ao playbook, até a cultura dos times." },
+  { icon: "gauge", title: "Gestão por fluxo", text: "Lead Time, Throughput e Aging guiando decisões." },
+  { icon: "target", title: "Estratégia na execução", text: "OKRs desdobrados até o item de trabalho." },
+  { icon: "boxes", title: "Produto antes de projeto", text: "Times contínuos e ciclo de vida do produto." },
+  { icon: "cpu", title: "Base de engenharia", text: "20 anos em hardware, firmware e qualidade." },
+  { icon: "globe", title: "Atuação internacional", text: "Projetos em inglês com EUA, Índia e China." },
+] as const
 
 // ---------------------------------------------------------------------
 // Linha do tempo (anos decimais: 2010.5 = meio de 2010)
@@ -220,203 +200,60 @@ export const skills = {
   Ferramentas: ["Jira", "Jira Rovo", "Azure DevOps", "Power BI", "Confluence", "Miro", "MS Project"],
 }
 
-// Cole aqui as recomendações do LinkedIn. Enquanto a lista estiver vazia, a seção não aparece no site.
-export const recommendations: { text: string; author: string; role: string }[] = [
+// Para incluir a foto de quem recomendou: salve a imagem em src/assets/people/ e preencha "photo" com o nome do arquivo.
+export const recommendations: { text: string; author: string; role: string; photo?: string }[] = [
   {
     author: "Aluísio Maykot Serafim",
+    photo: "aluisio-serafim.webp",
     role: "Diretor de Produtos, supervisionou Sérgio diretamente",
     text: "O Sérgio é líder nato, que puxa o time, ouve cada um e faz gestão de verdade, com delegação e empoderamento. Além de tudo, é excelente na interação com outras áreas, pois sabe ouvir e é atencioso. Organizado, domina seus processos rapidamente, mesmo diante de novos e grandes desafios.",
   },
   {
     author: "Alexandre Jun Onoda",
+    photo: "alexandre-onoda.webp",
     role: "Product Manager, Supply Chain e Abastecimento",
     text: "O trabalho do Sérgio em nosso time de abastecimento foi primordial para estruturação e padronização de processos, o que trouxe estabilidade para nossos desenvolvimentos; visibilidade da cadência de entregas, garantindo que desde PMs até Tech Leads olhassem para todo o nosso ciclo de desenvolvimento, com fluidez e antecipando possíveis gargalos; e visibilidade das entregas, com dashboards que trouxeram mais embasamento a todas as nossas discussões de planejamento e retrospectivas. Sempre atento e aberto a novas ideias, conseguimos discutir, equilibrar e conciliar as diferentes necessidades do time.",
   },
   {
     author: "Fábio Ignácio da Rosa",
+    photo: "fabio-rosa.webp",
     role: "Head of R&D & Product, Hardware, Telecom e IoT",
     text: "O Sérgio é um profissional com foco nos objetivos do time. Um dos seus pontos fortes é sua visão sistêmica, o que garante o excelente resultado do grupo.",
   },
   {
     author: "João Muller",
+    photo: "joao-muller.webp",
     role: "Head de Produtos e Negócios",
     text: "Sérgio é um profissional com uma excelente visão sistêmica, consegue gerenciar bem situações difíceis e com diferentes stakeholders.",
   },
   {
     author: "Marcus Vinícius Bez Batti",
+    photo: "marcus-batti.webp",
     role: "Produtos e Negócios, Pricing e Portfólio",
     text: "O Sérgio é uma pessoa diferenciada e comprometida. Durante a construção do segmento em que atuou, acumulou por diversas vezes papéis a mais para garantir o sucesso do negócio, tudo isso mantendo um ótimo relacionamento interpessoal com colegas e áreas de apoio.",
   },
   {
     author: "Guilherme Costa",
+    photo: "guilherme-costa.webp",
     role: "Gerente da Operação de Energia Solar",
     text: "O Sérgio é um profissional extremamente dedicado e comprometido. Tem um grande foco em resultado e excelente relacionamento interpessoal. Tivemos grandes resultados quando trabalhávamos juntos no projeto do DVR mobile Intelbras.",
   },
   {
     author: "Israel Simas",
+    photo: "israel-simas.webp",
     role: "Engineering Manager, Search e Generative AI",
     text: "Sérgio é um profissional aplicado, dedicado e centrado nas soluções técnicas mais robustas, seguras e eficientes, com foco em construir um produto de excelência. A busca contínua por melhorias, a rápida integração nas equipes em que trabalha e a autonomia nas decisões diárias são atributos nos quais sempre me inspiro no Sérgio Passos.",
   },
   {
     author: "Marco Antonio Vargas",
+    photo: "marco-vargas.webp",
     role: "Software Engineer",
     text: "O Sérgio possui fortes competências técnicas e veste a camisa da empresa. Sempre focado nas atividades e preocupado com o negócio da empresa em que trabalha. Possui também qualidades pessoais fundamentais em qualquer organização, como força, resiliência, empatia, simpatia e excelente capacidade de comunicação. Trabalhamos juntos vários anos e considero que o Sérgio tem todas as condições para evoluir rapidamente em qualquer área, uma característica valiosa para qualquer empresa.",
   },
   {
     author: "Leandro Otranto dos Santos",
+    photo: "leandro-santos.webp",
     role: "Analista de Desenvolvimento de Produtos, Intelbras",
     text: "Sérgio é o tipo de profissional que impulsiona: seu comprometimento, dedicação e garra elevam produtos e negócios. Com sua capacidade multidisciplinar e gestão sistêmica, traz o diferencial para o time em que atua, além da sensibilidade e do respeito humano aos colegas. Sem dúvida, fez e fará a diferença com sua bagagem profissional e capacidade de desenvolvimento para novos desafios.",
-  },
-]
-
-// ---------------------------------------------------------------------
-// Projetos (cases)
-// ---------------------------------------------------------------------
-export type Project = {
-  slug: string
-  title: string
-  tagline: string
-  summary: string
-  company: string
-  period: string
-  sector: string
-  role: string
-  partners?: string
-  highlight?: { before: string; after: string; label: string }
-  impact: string[]
-  context: string[]
-  steps: { title: string; text: string }[]
-  results: string[]
-  keywords: string[]
-  link?: { href: string; label: string }
-  featured?: boolean
-}
-
-export const projects: Project[] = [
-  {
-    slug: "modelo-operacional-agil-pernambucanas",
-    title: "Modelo operacional ágil para a Tecnologia",
-    tagline: "Da gestão projetizada para a gestão por produtos",
-    summary:
-      "Construção, desde o zero, do modelo de trabalho ágil da Tecnologia do Grupo Pernambucanas, conectando estratégia, OKRs e execução das squads.",
-    company: "Grupo Pernambucanas",
-    period: "2026",
-    sector: "Varejo",
-    role: "Líder de Agilidade e Agile Coach",
-    impact: ["Base de métricas de entrega criada do zero", "PITs com horizonte de até 3 meses"],
-    context: [
-      "A Tecnologia operava em modelo projetizado, sem histórico estruturado de tempos de entrega e com pouca rastreabilidade entre os objetivos estratégicos e o trabalho das equipes.",
-      "O desafio era desenhar e implantar um modelo operacional que permitisse planejar em ciclos trimestrais, acompanhar a execução com dados e dar continuidade aos produtos em vez de encerrar projetos.",
-    ],
-    steps: [
-      { title: "Framework de trabalho", text: "Desenho do modelo operacional da Tecnologia: processos, ritos, priorização, acompanhamento, governança e mecanismos de melhoria contínua." },
-      { title: "Gestão de Produtos", text: "Apoio à transição para times contínuos por produto, com papéis, responsabilidades e interfaces formalizados entre Produto, Tecnologia e Negócio." },
-      { title: "OKRs até o item de trabalho", text: "Hierarquia de work items no Jira ligando objetivos estratégicos, iniciativas, PITs, épicos, funcionalidades e itens de execução." },
-      { title: "Métricas e acompanhamento", text: "Implantação de indicadores de fluxo no Jira e planejamento dos PITs alinhado ao ciclo trimestral de OKRs." },
-      { title: "Playbook e capacitação", text: "Elaboração integral do Playbook de Tecnologia e disseminação das práticas com POs, Squad Leads e lideranças." },
-    ],
-    results: [
-      "Base de mensuração do desempenho da Tecnologia, saindo de um cenário sem histórico de tempos de entrega.",
-      "Horizonte de até três meses para entrega dos PITs, alinhado ao planejamento trimestral de OKRs.",
-      "Rastreabilidade entre prioridades estratégicas e itens de trabalho das equipes.",
-      "Modelo de trabalho padronizado por meio do framework e do Playbook de Tecnologia.",
-      "Fundamentos para gestão do ciclo de vida dos produtos e priorização recorrente com o negócio.",
-    ],
-    keywords: ["Transformação Ágil", "Gestão de Produtos", "OKRs", "Jira", "Governança", "Playbook", "Métricas de Fluxo"],
-    featured: false,
-  },
-  {
-    slug: "transformacao-agil-riachuelo",
-    title: "Transformação ágil orientada a dados",
-    tagline: "Lead time de features de 30 para 10 dias",
-    summary:
-      "Diagnóstico com STATIK, gestão de fluxo e dashboards em três níveis para dar à Tecnologia da Riachuelo visibilidade real sobre capacidade e entrega de valor.",
-    company: "Riachuelo",
-    period: "2023 a 2025",
-    sector: "Varejo",
-    role: "Especialista em Agilidade",
-    highlight: { before: "30 dias", after: "10 dias", label: "lead time de features" },
-    impact: ["-66,7% no lead time de features", "Dashboards estratégicos, táticos e operacionais"],
-    context: [
-      "As equipes tinham pouca visibilidade sobre a própria capacidade de entrega e sobre o valor gerado. Liderança e times não compartilhavam uma leitura comum do andamento das iniciativas, e riscos apareciam tarde.",
-      "O objetivo era estabelecer um modelo de trabalho ágil, transparente e orientado a resultados, ampliando previsibilidade e a integração entre pessoas, processos, tecnologia e estratégia.",
-    ],
-    steps: [
-      { title: "Diagnóstico com STATIK", text: "Entendimento do sistema de trabalho, mapeamento do fluxo de valor e identificação de gargalos, bloqueios e oportunidades." },
-      { title: "Priorização das dores", text: "Levantamento dos principais desafios operacionais e organizacionais e estruturação de planos de ação." },
-      { title: "Práticas e gestão do fluxo", text: "Gestão visual, priorização de demandas, gestão de impedimentos e acompanhamento de aging, lead time e cycle time." },
-      { title: "Dashboards em três níveis", text: "Painéis estratégicos, táticos e operacionais com percentual de conclusão, itens planejados e não concluídos, bloqueios e tempos de fluxo." },
-      { title: "Playbook e capacitação", text: "Playbook do Modelo de Trabalho, treinamentos e workshops sobre papéis, práticas e melhoria contínua." },
-    ],
-    results: [
-      "Lead time das features reduzido de 30 para 10 dias, uma redução aproximada de 66,7%.",
-      "Transparência sobre andamento, conclusão, pendências, impedimentos e bloqueios.",
-      "Atuação preventiva sobre riscos, atrasos e itens de trabalho parados.",
-      "Gestão orientada a métricas, com acompanhamento contínuo de lead time, cycle time e aging.",
-      "Execução operacional mais alinhada aos objetivos estratégicos.",
-    ],
-    keywords: ["STATIK", "Kanban", "Lead Time", "Cycle Time", "Aging", "Power BI", "Value Stream", "Playbook"],
-    featured: true,
-  },
-  {
-    slug: "seguranca-veicular-intelbras",
-    title: "Segurança veicular: de time a unidade de negócios",
-    tagline: "Hardware, firmware e software com parceiro na China",
-    summary:
-      "Desenvolvimento da solução de monitoramento para frotas de ônibus e caminhões da Intelbras, em parceria com a Streamax, desde o plano de negócios até o portfólio consolidado.",
-    company: "Intelbras",
-    period: "2014 a 2019",
-    sector: "Segurança eletrônica",
-    role: "Engenheiro responsável pelo desenvolvimento",
-    partners: "Streamax (Shenzhen, China)",
-    impact: ["Time interno virou unidade de negócios", "Solução no portfólio até hoje"],
-    context: [
-      "A Intelbras queria entrar no mercado de segurança veicular com DVRs embarcados, transmissão de imagens em tempo real, alarmes e detecção de fadiga, a partir de produtos de um parceiro chinês que precisavam ser adaptados ao Brasil.",
-      "Toda a linha precisava passar pelos testes de qualidade da Intelbras, e a integração entre firmware e software de front-end apresentou problemas recorrentes ao longo de mais de dois anos.",
-    ],
-    steps: [
-      { title: "Plano de negócios e tropicalização", text: "Adaptação de hardware, firmware e software ao mercado brasileiro, incluindo tradução e operação local." },
-      { title: "Validação e qualidade", text: "Testes de software, validações de campo e trabalho próximo ao parceiro até a linha atender aos critérios de qualidade da empresa." },
-      { title: "Imersão em Shenzhen", text: "Seis meses junto ao P&D da Streamax para acelerar a conclusão do projeto, com toda a interação em inglês." },
-      { title: "Mercado e clientes", text: "Apresentações, provas de conceito, suporte técnico e projetos customizados para empresas de ônibus e transportadoras." },
-    ],
-    results: [
-      "A iniciativa começou como um time dentro do segmento de segurança eletrônica e, em cerca de 4 anos, tornou-se uma unidade de negócios independente.",
-      "Faturamento na casa dos milhões de reais para o segmento.",
-      "A solução segue no portfólio de produtos e serviços da Intelbras.",
-    ],
-    keywords: ["OEM/ODM", "Hardware", "Firmware", "Tropicalização", "Qualidade", "PoC", "Inglês", "Projetos Internacionais"],
-    link: { href: "https://www.intelbras.com/pt-br/seguranca-eletronica/monitoramento-veicular", label: "Ver a solução no site da Intelbras" },
-    featured: true,
-  },
-  {
-    slug: "cisco-be3000-intelbras",
-    title: "Integração Cisco BE3000 e telefones IP Intelbras",
-    tagline: "A primeira abertura do protocolo Cisco para outra marca",
-    summary:
-      "Tropicalização da central PABX IP Cisco Business Edition 3000 e integração dos telefones IP Intelbras TIP 100 à central, na parceria Intelbras e Cisco.",
-    company: "Intelbras",
-    period: "2010 a 2012",
-    sector: "Telecomunicações",
-    role: "Gestor de Projeto e Engenheiro de Desenvolvimento e Validação",
-    partners: "Cisco (P&D na Índia, marketing em San Francisco)",
-    impact: ["Cerca de +30% nas vendas do TIP 100", "Mais de 200 centrais Cisco vendidas"],
-    context: [
-      "Foi a primeira vez que a Cisco disponibilizou seu protocolo de comunicação para que telefones IP de outra marca se registrassem em suas centrais.",
-      "O projeto exigia validar a central completa para o mercado brasileiro e garantir a operação totalmente integrada do telefone Intelbras.",
-    ],
-    steps: [
-      { title: "Desenvolvimento conjunto", text: "Integração e desenvolvimento das aplicações com os engenheiros de P&D da Cisco na Índia, e alinhamento comercial e de marketing com a Cisco em San Francisco." },
-      { title: "Validação de aplicações", text: "Validação das aplicações de alto nível, solução de tarifação e troncos analógicos a partir de gateways Intelbras." },
-      { title: "Homologação e campo", text: "Homologação e testes de campo da central e da operação do telefone IP TIP 100." },
-    ],
-    results: [
-      "Aumento de cerca de 30% nas vendas anuais dos telefones TIP 100 após o lançamento.",
-      "Mais de 200 centrais Cisco vendidas.",
-      "Aumento aproximado de 10% no faturamento do segmento.",
-      "Padrão de interoperabilidade usado como referência em projetos futuros.",
-    ],
-    keywords: ["VoIP", "PABX IP", "Interoperabilidade", "Homologação", "Gestão de Projetos", "Inglês", "Cisco"],
-    featured: false,
   },
 ]

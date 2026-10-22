@@ -9,12 +9,15 @@ import About from "@/pages/About"
 import Projects from "@/pages/Projects"
 import ProjectCase from "@/pages/ProjectCase"
 import Contact from "@/pages/Contact"
+import Blog from "@/pages/Blog"
+import BlogPost from "@/pages/BlogPost"
 import NotFound from "@/pages/NotFound"
 
 const titles: Record<string, string> = {
   "/": "Sérgio Passos | Agile Coach",
   "/sobre": "Sobre | Sérgio Passos",
   "/projetos": "Projetos | Sérgio Passos",
+  "/blog": "Blog | Sérgio Passos",
   "/contato": "Contato | Sérgio Passos",
 }
 
@@ -41,6 +44,8 @@ export default function App() {
           <Route path="/sobre" element={<About />} />
           <Route path="/projetos" element={<Projects />} />
           <Route path="/projetos/:slug" element={<ProjectCase />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contato" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

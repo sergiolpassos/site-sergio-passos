@@ -4,10 +4,11 @@ Site em React + Vite + Tailwind CSS + componentes shadcn/ui.
 
 ## Onde editar o conteúdo
 
-Todo o texto está em `src/data/profile.ts`: resumo, experiência, formação, certificações, projetos (cases) e recomendações.
-A foto está em `src/assets/sergio-passos.jpg` e o currículo em `public/curriculo-sergio-passos.pdf`.
-
-Para incluir as recomendações do LinkedIn, preencha a lista `recommendations` no mesmo arquivo. Enquanto ela estiver vazia, a seção não aparece.
+- `src/data/profile.ts`: resumo, pilares, trajetória, formação, certificações, competências e recomendações.
+- `src/data/projects.ts`: os cases (desafio, papel, como foi feito, decisões e resultados).
+- `src/data/blog.ts`: os textos do blog. As instruções de formato estão no topo do arquivo.
+- Imagens dos cases: `src/assets/cases/`. Fotos de quem recomendou: `src/assets/people/` (preencha o campo `photo`).
+- Foto: `src/assets/sergio-passos.jpg`. Currículo: `public/curriculo-sergio-passos.pdf`.
 
 ## Rodar no computador (opcional)
 
@@ -27,6 +28,16 @@ npm run dev
 5. Aguarde a propagação (de minutos a algumas horas). O HTTPS é ativado automaticamente.
 
 O arquivo `vercel.json` já faz com que links diretos (ex.: `/sobre` ou `/projetos/...`) funcionem quando compartilhados.
+
+## Atualizar o site depois de uma nova versão
+
+1. Descompacte o novo arquivo .zip.
+2. No GitHub, abra o repositório e clique em **Add file > Upload files**.
+3. Abra a pasta `sergio-site`, selecione tudo o que está dentro dela e arraste para a página. Arquivos com o mesmo nome são substituídos.
+4. Escreva uma descrição (ex.: "Nova versão dos cases e blog") e clique em **Commit changes**.
+5. A Vercel publica sozinha em cerca de 1 minuto. Acompanhe em **Deployments** no painel da Vercel.
+
+Para mudar só um texto, abra o arquivo no GitHub, clique no lápis, edite e clique em **Commit changes**.
 
 ## Adicionar mais componentes shadcn/ui
 
